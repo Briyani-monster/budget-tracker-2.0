@@ -1,0 +1,14 @@
+.bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-chart {
+    width: 10px;
+    overflow: none;
+    position: relative;
+    background-color: #e1e1e1e1;
+    border-radius: 10px;
+    height: 100px;
+  }
+}

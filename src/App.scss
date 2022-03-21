@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+}
+.input {
+  height: 2rem;
+  width: 15rem;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding-left: 10px;
+  border: 2px solid #12b886;
+  box-shadow: 0 0 10px rgba(18, 184, 134, 0.3);
+  outline: none;
+
+  &-btn {
+    text-transform: capitalize;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(18, 184, 134, 0.3);
+    background-color: #12b886;
+
+    cursor: pointer;
+    &:hover {
+      filter: brightness(1.2);
+    }
+  }
+}

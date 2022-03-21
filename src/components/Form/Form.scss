@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 2rem 2rem;
+  padding: 20px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  .toggle {
+    position: relative;
+
+    & .radio {
+      position: absolute;
+      top: 0;
+      z-index: -100;
+      & + .income {
+        border-radius: 10px 0 0 10px;
+      }
+      & + .expense {
+        border-radius: 0px 10px 10px 0;
+      }
+    }
+    & .type {
+      cursor: pointer;
+      background-color: #eeebeb;
+      padding: 5px 10px;
+      transition: background-color 0.3s ease-in;
+    }
+
+    .radio:checked + .income {
+      background-color: #12b886;
+    }
+    .radio:checked + .expense {
+      background-color: #fa5252;
+    }
+  }
+  & .ammount {
+    border: 1px solid grey;
+    width: 15rem;
+    font-size: 1.5rem;
+    overflow: hidden;
+    border-radius: 50px;
+    padding-left: 10px;
+    & input {
+      padding: 10px 0 10px 20px;
+      width: 92%;
+      border: none;
+      outline: none;
+      font-size: 1.5rem;
+    }
+  }
+  & .description {
+    display: flex;
+    gap: 10px;
+    & input {
+      width: 50%;
+      font-size: 1.5rem;
+      outline: none;
+      border: 1px solid grey;
+      padding-left: 10px;
+    }
+  }
+  & .category {
+    & ul {
+      list-style: none;
+    }
+    & .search-item {
+      height: 2rem;
+      outline: none;
+    }
+  }
+  & .submit {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0 3rem;
+
+    &-btn {
+      font-size: 1.5rem;
+      text-transform: capitalize;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 50px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      &:hover {
+        filter: brightness(1.2);
+      }
+    }
+    & .income-btn {
+      background-color: #12b886;
+    }
+    & .expense-btn {
+      background-color: #fa5252;
+    }
+  }
+}
